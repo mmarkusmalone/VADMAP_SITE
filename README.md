@@ -3,9 +3,9 @@
 VADMap is an interactive web application for recording, analyzing, and visualizing journal entries based on their **Valence**, **Arousal**, and **Dominance** (VAD) emotional dimensions. It combines a rich 3D visualization (via [Three.js](https://threejs.org/)) with backend AI-powered sentiment analysis to help users reflect on their emotional journeys over time.
 
 ---
-<img width="1340" height="755" alt="Screenshot 2025-08-14 at 1 47 47 PM" src="https://github.com/user-attachments/assets/c973542c-a265-4752-aea1-573c072344f6" />
+<img width="750" height="400" alt="Screenshot 2025-08-14 at 1 47 47 PM" src="https://github.com/user-attachments/assets/c973542c-a265-4752-aea1-573c072344f6" />
 <img width="748" height="417" alt="Screenshot 2025-08-14 at 1 48 37 PM" src="https://github.com/user-attachments/assets/cbbfa38e-cf65-4e1d-91e4-a81f4be5a59f" />
-<img width="1174" height="524" alt="Screenshot 2025-08-14 at 1 49 29 PM" src="https://github.com/user-attachments/assets/dc3ce90e-c210-4e1d-983f-80b0d01c9bbf" />
+<img width="750" height="350" alt="Screenshot 2025-08-14 at 1 49 29 PM" src="https://github.com/user-attachments/assets/dc3ce90e-c210-4e1d-983f-80b0d01c9bbf" />
 
 
 ## ✨ Features
@@ -115,4 +115,5 @@ o	https://www.techrxiv.org/doi/full/10.36227/techrxiv.174495503.30847070
 o	https://www.researchgate.net/profile/Arya-Arya-3/publication/391015547_DEAR_DIARY_Mental_Health_Supervisor/links/68080ea3df0e3f544f456b1c/DEAR-DIARY-Mental-Health-Supervisor.pdf 
 o	https://journals.sagepub.com/doi/full/10.1177/0038038515578993 
 o	https://www.tandfonline.com/doi/abs/10.1080/08873267.2012.724255 
+
 
