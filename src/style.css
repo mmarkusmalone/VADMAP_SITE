@@ -1,0 +1,296 @@
+/* === Fonts === */
+body, button, textarea, input, select, .modal-content, .filter-menu {
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  color: white;
+}
+
+/* === Title === */
+#title {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  display: block;
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
+/* === Top-left Controls === */
+#top-left-controls {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-button {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: center;
+}
+
+.control-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+}
+
+/* === Modal Base === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content label {
+  color: black;
+}
+
+.modal-content input,
+.modal-content textarea {
+  color: black;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+}
+
+/* Close Button */
+.close-button {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #ddd;
+}
+
+/* === Add Entry Modal === */
+#entry-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Journal Entry View Modal === */
+#journal-entry-modal .modal-content {
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Modal Text & Date Blocks */
+#modal-date,
+#journal-entry-date {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#modal-text,
+#journal-entry-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+#emotion-legend {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* Removed dark background and padding */
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-family: sans-serif;
+  font-size: 18px; /* Doubled font size */
+  color: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased row spacing */
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Increased spacing between elements */
+}
+
+.legend-gradient {
+  width: 150px;
+  height: 5px;
+  border-radius: 0px;
+  margin: 0 8px;
+  background-color: #ccc; /* fallback */
+  flex-shrink: 0;
+}
+
+
+.legend-label {
+  width: 140px; /* Doubled label width */
+  text-align: right;
+  margin-right: 16px; /* Increased margin */
+  /* font-weight: bold; */
+}
+
+.legend-row img {
+  width: 48px;  /* Doubled icon size */
+  height: 48px;
+  object-fit: contain;
+}
+
+
+/* Gradient colors (unchanged, but you can tweak for visibility) */
+.valence-gradient {
+  background: linear-gradient(to right, #5cba52, yellow);
+}
+
+.arousal-gradient {
+  background: linear-gradient(to right, blue, red);
+}
+
+.dominance-gradient {
+  background: linear-gradient(to right, purple, orange);
+}
+
+
+
+/* === Filter Menu === */
+.filter-menu {
+  position: fixed;
+  top: 43%;
+  left: 1.5%;
+  transform: translateY(-50%);
+  padding: 16px;
+  width: 240px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.25);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  color: white;
+}
+
+.filter-menu label {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.filter-menu input,
+.filter-menu select {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* === Filter Tags === */
+.active-filters {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.filter-tag {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 4px 8px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-content button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: black;
+  padding: 8px 16px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-content button:hover {
+  background-color: white;
+  color: #111;
+}
+
+.filter-menu button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-menu button:hover {
+  background-color: white;
+  color: #111;
+}

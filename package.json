@@ -1,0 +1,23 @@
+{
+  "name": "vadmap_prod",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmarkusmalone/VADMAP_SITE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmarkusmalone/VADMAP_SITE/issues"
+  },
+  "homepage": "https://github.com/mmarkusmalone/VADMAP_SITE#readme",
+  "description": "",
+  "dependencies": {
+    "three": "^0.179.1"
+  }
+}

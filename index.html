@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <link rel= "stylesheet" href= "./src/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/lle1kea.css">
+  </head>
+  <body>
+    <div id="title"> 
+      <!-- <h1>Your Thought Cube</h1> -->
+    </div>
+    <div id="top-left-controls">
+      <button id="about-button" class="control-button">About VADMAP</button>
+      <button id="add-entry-button" class="control-button">Add New Entry</button>
+      <button id="view-journal-button" class="control-button">View Journal Entries</button>
+      <button id="filter-button" class="control-button">Filters</button>
+      <div id="emotion-legend">
+        <div class="legend-row">
+          <span class="legend-label">Valence</span>
+          <img src="img/low_valence.png" alt="Low Valence">
+          <div class="legend-gradient valence-gradient"></div>
+          <img src="img/high_valence.png" alt="High Valence">
+        </div>
+        <div class="legend-row">
+          <span class="legend-label">Arousal</span>
+          <img src="img/low_arousal.png" alt="Low Arousal">
+          <div class="legend-gradient arousal-gradient"></div>
+          <img src="img/high_arousal.png" alt="High Arousal">
+        </div>
+        <div class="legend-row">
+          <span class="legend-label">Dominance</span>
+          <img src="img/low_dominance.png" alt="Low Dominance">
+          <div class="legend-gradient dominance-gradient"></div>
+          <img src="img/high_dominance.png" alt="High Dominance">
+        </div>
+      </div>
+      <div id="filter-menu" class="filter-menu" style="display: none;">
+        <label>
+          Keyword:
+          <input type="text" id="keyword-filter" placeholder="Search keyword..." />
+        </label>
+
+        <label>
+          Date Range:
+          <div style="display: flex; gap: 4px;">
+            <select id="date-min"></select>
+            <span>to</span>
+            <select id="date-max"></select>
+          </div>
+        </label>
+
+        <label>
+          Valence Range:
+          <div style="display: flex; gap: 4px;">
+            <input type="number" id="valence-min" min="-1" max="1" step="0.01" value="-1" />
+            <span>to</span>
+            <input type="number" id="valence-max" min="-1" max="1" step="0.01" value="1" />
+          </div>
+        </label>
+
+        <label>
+          Arousal Range:
+          <div style="display: flex; gap: 4px;">
+            <input type="number" id="arousal-min" min="-1" max="1" step="0.01" value="-1" />
+            <span>to</span>
+            <input type="number" id="arousal-max" min="-1" max="1" step="0.01" value="1" />
+          </div>
+        </label>
+
+        <label>
+          Dominance Range:
+          <div style="display: flex; gap: 4px;">
+            <input type="number" id="dominance-min" min="-1" max="1" step="0.01" value="-1" />
+            <span>to</span>
+            <input type="number" id="dominance-max" min="-1" max="1" step="0.01" value="1" />
+          </div>
+        </label>
+
+        <button id="apply-filters">Apply Filters</button>
+        <div id="active-filters" class="active-filters"></div>
+      </div>
+
+
+
+    <!-- The Modal -->
+    <div id="view-journal-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3>Select a Journal Entry</h3>
+        <div id="journal-list-container" style="margin-bottom: 15px;">
+          <h3 id="modal-date"></h3>
+          <p id="modal-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="journal-entry-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="journal-entry-close">&times;</span>
+        <h3 id="journal-entry-date"></h3>
+        <p id="journal-entry-text"></p>
+      </div>
+    </div>
+
+    <!-- Journal Entry Modal (Selected Entry Display) -->
+    <div id="entry-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="entry-close-button">&times;</span>
+        <h3>Add New Entry</h3>
+        <label for="new-entry-date">Date:</label>
+        <input type="date" id="new-entry-date" />
+
+        <label for="new-entry-text">Entry:</label>
+        <textarea id="new-entry-text" rows="6" placeholder="Write your journal entry here..." style="width: 100%;"></textarea>
+
+        <button id="submit-button">Submit</button>
+      </div>
+    </div>
+    <script type="module" src="./src/source.js"></script>
+  </body>
+</html>
