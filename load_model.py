@@ -27,7 +27,7 @@ model.eval()
 tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
 
 def split_text(paragraph):
-    client = genai.Client(api_key = "AIzaSyB6tYc1OUL0UDfP_1dWbUtku-u-0XnCe04")
+    client = genai.Client(api_key = "YOUR_API_KEY")
     prompt = (
         "I am inputting a long paragraph and I want to split it into smaller chunks, each under 1000 characters.\n\n"
         "Please split based on natural semantic shifts — such as when the subject, person, emotion, or activity clearly changes. "
